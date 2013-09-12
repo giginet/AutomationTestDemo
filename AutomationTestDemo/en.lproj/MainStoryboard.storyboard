@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JoN-uT-SRM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="KWViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-7B-sp5">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Press Me">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressMeButtonPressed:" destination="2" eventType="touchUpInside" id="DNH-x2-hjp"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is a test." translatesAutoresizingMaskIntoConstraints="NO" id="1uY-th-3Om">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="AA3-3j-rOA"/>
+                                    <constraint firstAttribute="height" constant="245" id="vc8-Mr-pxr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CLh-7B-sp5" firstAttribute="centerX" secondItem="1uY-th-3Om" secondAttribute="centerX" type="default" id="Q9L-3z-WsG"/>
+                            <constraint firstItem="CLh-7B-sp5" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="V3J-cF-aeF"/>
+                            <constraint firstItem="1uY-th-3Om" firstAttribute="top" secondItem="3" secondAttribute="top" constant="222" id="hDh-DO-wkh"/>
+                            <constraint firstItem="CLh-7B-sp5" firstAttribute="top" secondItem="3" secondAttribute="top" constant="113" id="sIG-xS-03O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hW4-R8-faI">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="4LK-tx-boE">
+                            <connections>
+                                <segue destination="41v-Nj-VPt" kind="push" id="GZR-Vi-wR8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="1uY-th-3Om" id="avc-ib-eRd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="-275"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zxo-hX-J3t">
+            <objects>
+                <viewController id="41v-Nj-VPt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8sm-L1-RIM">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The quick brown fox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-xp-9aB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="jumps over the lazy dog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csr-Ad-H8i">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcn-aH-qg0"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="csr-Ad-H8i" firstAttribute="top" secondItem="2gK-xp-9aB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="D1y-01-3Pt"/>
+                            <constraint firstItem="Pcn-aH-qg0" firstAttribute="leading" secondItem="8sm-L1-RIM" secondAttribute="leading" constant="127" id="DPW-Ex-NQy"/>
+                            <constraint firstAttribute="bottom" secondItem="Pcn-aH-qg0" secondAttribute="bottom" constant="152" id="LLb-bA-ihm"/>
+                            <constraint firstItem="csr-Ad-H8i" firstAttribute="centerX" secondItem="2gK-xp-9aB" secondAttribute="centerX" type="default" id="WGg-gz-Ezy"/>
+                            <constraint firstItem="csr-Ad-H8i" firstAttribute="leading" secondItem="8sm-L1-RIM" secondAttribute="leading" constant="57" id="hhr-MY-WMY"/>
+                            <constraint firstItem="2gK-xp-9aB" firstAttribute="top" secondItem="8sm-L1-RIM" secondAttribute="top" constant="150" id="oic-y2-6ye"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EeX-O8-4h1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dP-GY-bD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="-280"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fBA-6R-ziz">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="JoN-uT-SRM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DYv-m3-6Oh">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="QD9-xN-Kds"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyI-FY-NcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-316" y="-275"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="KWViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KWViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pressMeButtonPressed:"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
