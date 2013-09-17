@@ -1,4 +1,4 @@
-#import "/Users/giginet/Desktop/AutomationTestDemo/tuneup_js/tuneup.js"
+#import "../tuneup_js/tuneup.js"
 test('Tap switch on second page.', function(target, app) {
   target.frontMostApp().navigationBar().rightButton().tap();
   target.delay(1.0);

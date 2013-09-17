@@ -30,7 +30,7 @@
 - (void)pressMeButtonPressed:(id)sender
 {
     ++self.count;
-    self.textView.text = [NSString stringWithFormat:@"pressed %d times", self.count];
+    self.textView.text = [NSString stringWithFormat:@"Pressed %d times", self.count];
 }
 
 @end
