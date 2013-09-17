@@ -1,4 +1,4 @@
-#import "../tuneup_js/tuneup.js"
+#import "../../tuneup_js/tuneup.js"
 test('Tap button fifty times', function(target, app) {
   target.frontMostApp().mainWindow().buttons()[0].tapWithOptions({tapCount:50});
   target.delay(1.0);
